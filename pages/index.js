@@ -36,17 +36,21 @@ function Home() {
   return (
     <main className={styles.main}>
       <h1>EasyPea</h1>
-
+      <p>
+        Write anything that comes to your mind, get a link and share it with
+        others. Easy, fast and free.
+      </p>
       <hr className={styles.hr} />
       <h4>Editor</h4>
       <p>
         This is your workspace. Write anything that comes to your mind, get a
         link and share it with others. Easy, fast and free.
+        Scroll right to disable the preview, if you're on a small screen.
       </p>
       <div>
       <MdEditor preview={
         !false
-      } language={'en-US'} modelValue={text} onChange={setText} />
+      } noUploadImg={false} language={'en-US'} modelValue={text} onChange={setText} />
         <p>Seconds since you opened this page: {count}</p>
       </div>
       <hr className={styles.hr} />
@@ -56,6 +60,11 @@ function Home() {
       </div>
       <hr className={styles.hr} />
       <div>
+        <p>
+          To the cloud we go!{' '} This would upload the content to the cloud, redirect you to the link and you can share it with others. 
+          This is a work in progress, for now, you cannot change it once it's uploaded, so be careful of what you upload, it's public, however it's like a youtube unlisted video, you can share the link with others, but it's not searchable, but anyone with the link can access it. 
+          DO NOT UPLOAD SENSITIVE INFORMATION FOR YOUR OWN SAKE. 
+        </p>
         <Button
           onClick={(e) => {
             // nothing
@@ -64,6 +73,7 @@ function Home() {
           Get. Set. Go.
         </Button>
       </div>
+      <div dangerouslySetInnerHTML={ {__html: `<div style="width:100%;height:0;padding-bottom:66%;position:relative;"><iframe src="https://giphy.com/embed/TRpnnLcPTSYAXPglt2" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/CnagLDN-perfection-gaeilge-foirfeacht-TRpnnLcPTSYAXPglt2">via GIPHY</a></p>`}}></div>
       <hr className={styles.hr} />
     </main>
   )
