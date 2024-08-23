@@ -9,14 +9,14 @@ import styles from '../../styles/home.module.css'
 export async function getServerSideProps({params, req, res}) {
     // Connect to Redis
     const client = await createClient({
-        url: process.env.REDIS_URL
+        url: process.env.REDIS_URL,
     })
         .on('error', err => console.log('Redis Client Error', err))
         .connect();
     // Get the text from Redis
     
-    const text = await client.get(params.id) || '404: Not Found';
-    console.log('id:', params.id)
+    const text = await client.get(params.user) || '404: Not Found';
+    console.log('userpage:', params.user)
     // Close the Redis connection
     await client.disconnect();
 
@@ -29,14 +29,17 @@ export async function getServerSideProps({params, req, res}) {
     }
 }
 
-export default function Page({ text }) {
+export default function UserPage({ userdata }) {
     const router = useRouter()
+    const { name, bio, links } = userdata
+
 
     return (<main className={styles.main}>
-        <MdPreview modelValue={text} />
-        <h2>
-            by {router.query.id}
-        </h2>
-        <footer className={styles.footer}>Hosted on EasyPea</footer>
+        {/* User page */}
+        <h1>{name}</h1>
+        <p>{bio}</p>
+        <ul>
+            {links.map(link => <li><a href={'/a/'+link.id}>{link.title}</a></li>)}
+        </ul>
         </main>)
 }
