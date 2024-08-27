@@ -1,13 +1,20 @@
-# GitHub Codespaces ♥️ Next.js
+# EasyPea
 
-Welcome to your shiny new Codespace running Next.js! We've got everything fired up and running for you to explore Next.js.
+**EasyPea** is an open publishing platform that allows you to create and share content effortlessly. Inspired by platforms like Telegraph, EasyPea lets you publish articles, stories, or any content without the need to log in or create an account. It's as simple as writing and hitting publish!
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Features
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+- **No Login Required**: Publish instantly without the hassle of signing up or logging in.
+- **Simple and Intuitive Editor**: A minimalist editor that lets you focus on your content.
+- **Instant Publishing**: Share your articles with a single click and get a unique URL.
+- **Rich Media Support**: Embed images, videos, and links easily. (WIP)
+- **Mobile-Friendly**: Create and publish content on the go with a responsive design.
 
-To run this application:
+## Getting Started
 
-```
-npm run dev
-```
+### 1. Writing and Publishing
+
+1. **Visit the EasyPea website**.
+2. **Start writing** your content in the editor.
+3. **Click "Publish"** when you're done.
+4. **Share the link** to your content with others!
