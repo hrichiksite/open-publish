@@ -16,8 +16,7 @@ export default async function handler(req, res) {
 
         // Connect to Redis
         const client = await createClient({
-            host: process.env.REDIS_HOST || 'localhost',
-            port: process.env.REDIS_PORT || 6379,
+            url: process.env.KV_URL,
         })
             .on('error', err => console.log('Redis Client Error', err))
             .connect();

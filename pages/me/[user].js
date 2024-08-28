@@ -9,7 +9,7 @@ import styles from '../../styles/home.module.css'
 export async function getServerSideProps({params, req, res}) {
     // Connect to Redis
     const client = await createClient({
-        url: process.env.REDIS_URL,
+        url: process.env.KV_URL,
     })
         .on('error', err => console.log('Redis Client Error', err))
         .connect();
