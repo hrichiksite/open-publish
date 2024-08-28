@@ -72,7 +72,7 @@ function Home() {
             //send post request to the api
             //get the id
             //redirect to the page with the id
-            const req = await fetch('/api/upload', {
+            const req = await fetch('/api/post', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
